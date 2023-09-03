@@ -18,8 +18,8 @@ int main()
 {
 	int a, b, c, i;
 	char exp[50];
-	printf("\nInput\t");
-	gets(exp);
+	printf("Input Expression\t");
+	scanf("%s",&exp);
 	for (i = strlen(exp) - 1; i >= 0; i--)
 	{
 		if (exp[i] == '+')
