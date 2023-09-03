@@ -17,33 +17,33 @@ int pop()
 int main()
 {
 	int a, b, c, i;
-	char prefix[50];
+	char exp[50];
 	printf("\nInput\t");
-	gets(prefix);
-	for (i = strlen(prefix) - 1; i >= 0; i--)
+	gets(exp);
+	for (i = strlen(exp) - 1; i >= 0; i--)
 	{
-		if (prefix[i] == '+')
+		if (exp[i] == '+')
 		{
 			a = pop();
 			b = pop();
 			c = b + a;
 			push(c);
 		}
-		else if (prefix[i] == '-')
+		else if (exp[i] == '-')
 		{
 			a = pop();
 			b = pop();
 			c = b - a;
 			push(c);
 		}
-		else if (prefix[i] == '*')
+		else if (exp[i] == '*')
 		{
 			a = pop();
 			b = pop();
 			c = b * a;
 			push(c);
 		}
-		else if (prefix[i] == '/')
+		else if (exp[i] == '/')
 		{
 			a = pop();
 			b = pop();
@@ -52,7 +52,7 @@ int main()
 		}
 		else
 		{
-			push(prefix[i] - 48);
+			push(exp[i] - 48);
 		}
 	}
 	printf("\nFinal ans = %d", s[top]);
