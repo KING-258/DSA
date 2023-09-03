@@ -18,7 +18,7 @@ int main()
 {
 	int a,b,c,i;
 	char prefix[50];
-	printf("\nInput");
+	printf("\nInput\t");
 	gets(prefix);
 	for(i=strlen(prefix)-1;i>=0;i--)
 	{
