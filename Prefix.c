@@ -55,6 +55,6 @@ int main()
 			push(prefix[i] - 48);
 		}
 	}
-	printf("\nFinal ans = %d", pop());
+	printf("\nFinal ans = %d", s[top]);
 	return 0;
 }
