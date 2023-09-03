@@ -24,7 +24,9 @@ int main()
 	{
 		if (prefix[i] == '+')
 		{
-			c = pop() + pop();
+			a = pop();
+			b = pop();
+			c = b + a;
 			push(c);
 		}
 		else if (prefix[i] == '-')
