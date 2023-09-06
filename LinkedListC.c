@@ -8,8 +8,7 @@ struct node
 void createList(int n)
 {
           struct node *newNode, *temp;
-          int data, i;
-
+          int data;
           head = (struct node *)malloc(sizeof(struct node));
           if (head == NULL)
           {
@@ -21,7 +20,7 @@ void createList(int n)
           head->data = data;
           head->next = NULL;
           temp = head;
-          for (i = 2; i <= n; i++)
+          for (int i = 2; i <= n; i++)
           {
                     newNode = (struct node *)malloc(sizeof(struct node));
                     if (newNode == NULL)
