@@ -4,7 +4,8 @@ struct node
 {
           int data;
           struct node *next;
-} *head;
+};
+struct Node *head;
 void createList(int n)
 {
           struct node *newNode, *temp;
