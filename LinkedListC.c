@@ -54,14 +54,10 @@ void traverseList()
 int main()
 {
           int n;
-
           printf("Number of Nodes: ");
           scanf("%d", &n);
-
           createList(n);
-
           printf("\nLinked List\n");
           traverseList();
-
           return 0;
 }
