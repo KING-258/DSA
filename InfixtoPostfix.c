@@ -29,14 +29,6 @@ char PopOPR()
                     return ch;
           }
 }
-void Display()
-{
-          printf("Operator Stack\n");
-          for(int i=0; i<=topopr; i++)
-          {
-                    printf("%c",opr[i]);
-          }
-}
 void PushR(char b)
 {
           if(topr == 79)
@@ -115,8 +107,6 @@ int main()
                     else{
                               PushR(a);
                     }
-                    Display();
-                    DisplayR();
           }
           if(topopr!=-1)
           {
@@ -126,7 +116,7 @@ int main()
                               PushR(d);
                     }
           }
-          printf("Postfix Expression\n");
+          printf("\nPostfix Expression\n");
           DisplayR();
           return 0;
 }
