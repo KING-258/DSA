@@ -31,8 +31,8 @@ int main()
 		}
 		else if (exp[i] == '-')
 		{
-			a = pop();
 			b = pop();
+			a = pop();
 			c = b - a;
 			push(c);
 		}
