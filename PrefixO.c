@@ -52,7 +52,8 @@ int main()
 		}
 		else
 		{
-			push(exp[i] - 48);
+			int l = exp[i] - '0';
+			push(l);
 		}
 	}
 	printf("\nFinal ans = %d", s[top]);
