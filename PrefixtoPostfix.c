@@ -14,7 +14,6 @@ void push(struct Stack *s,char *ch) {
 char* pop(struct Stack *s) {
     char * ch = (char *) malloc (20*sizeof(char));
     strcpy(ch,s->st[(s->tos)--]);
-    int len = (int) strlen(ch);
     return ch;
 }
 
