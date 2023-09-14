@@ -1,30 +1,25 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-
 typedef struct {
     int day;
     char *month;
     int year;
 } DOB;
-
 typedef struct {
     int reg_no;
     char *name;
     char address[100];
 } STU_INFO;
-
 typedef struct {
     char * college_name;
     char university_name[50];
 } COLLEGE;
-
 typedef struct {
     DOB *d;
     STU_INFO info;
     COLLEGE clg;
 } STUDENT;
-
 void read(STUDENT *stds,int n) {
     int i;
     char temp[100];
@@ -54,7 +49,6 @@ void read(STUDENT *stds,int n) {
         scanf("%s",((stds+i)->clg.university_name));
     }
 }
-
 void display(STUDENT *stds,int n) {
     int i;
     for(i=0;i<n;i++) {
@@ -62,7 +56,6 @@ void display(STUDENT *stds,int n) {
         printf("The name is : %s\nThe registration number is: %d\nCollege Name: %s\nUniversity Name: %s\nThe DOB is: %d/%s/%d\nAddress: %s",(stds+i)->info.name,(stds+i)->info.reg_no,(stds+i)->clg.college_name,(stds+i)->clg.university_name,(stds+i)->d->day,(stds+i)->d->month,(stds+i)->d->year,(stds+i)->info.address);
     }
 }
-
 int main() {
     
     int n,i;
