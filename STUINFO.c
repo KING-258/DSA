@@ -71,6 +71,5 @@ int main() {
     }
     read(stds,n);
     display(stds,n);
-
     return 0;
 }
