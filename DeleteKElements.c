@@ -24,7 +24,7 @@ struct Stack del(struct Stack s, int ind)
 int main()
 {
           struct Stack s;
-          int n, i, j, k, count = 0;
+          int n, i, k;
           printf("Enter number of elements ");
           scanf("%d", &n);
           s.st = (int *)malloc(n * sizeof(int));
