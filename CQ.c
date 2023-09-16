@@ -1,7 +1,7 @@
 #include<stdio.h>
 struct CQ{
           int a;
-          int arr[80];
+          char arr[80];
           int front;
           int rear;
 };
@@ -10,7 +10,7 @@ void Initialise(struct CQ *s)
           s->front = -1;
           s->rear = -1;
 }
-void Push(struct CQ *s, int ad)
+void Push(struct CQ *s, char ad)
 {
           if(s->rear == -1)
           {
@@ -30,7 +30,7 @@ void Pop(struct CQ *s)
 {
           if (s->rear >= s->front)
           {
-                    printf("%d removed from front\n",s->arr[s->front]);
+                    printf("%c removed from front\n",s->arr[s->front]);
                     s->front++;
           }
           else{
@@ -41,7 +41,7 @@ void Display(struct CQ *s)
 {
           for(int i=s->front; i<=s->rear; i++)
           {
-                    printf("|%d|",s->arr[i]);
+                    printf("|%c|",s->arr[i]);
           }
 }
 int main()
@@ -63,9 +63,9 @@ int main()
                     scanf("%d",&ch);
                     if (ch == 1)
                     {
-                              int a;
+                              char a;
                               printf("Element to Push : ");
-                              scanf("%d",&a);
+                              scanf(" %c",&a);
                               Push(&s, a);
                     }
                     else if(ch == 2)
