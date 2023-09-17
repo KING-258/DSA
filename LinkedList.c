@@ -66,7 +66,8 @@ void Display()
           {
                     printf("List is Empty\n");
           }
-          else{
+          else
+          {
                     t = first;
                     while (t != NULL)
                     {
