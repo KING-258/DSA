@@ -74,7 +74,7 @@ void Display()
                               printf("|%d|----->",t->data);
                               t = t->next;
                     }
-                    printf("\n");
+                    printf("NULL\n");
           }
 }
 int main()
