@@ -55,7 +55,7 @@ void Add1a2()
           }
           temp->next = first2;
 }
-void Sort(int s)
+void Sort()
 {
           temp = first1;
           while(temp->next != NULL)
@@ -73,17 +73,6 @@ void Sort(int s)
                     }
                     temp = temp->next;
           }
-}
-int Length()
-{
-          int count = 1;
-          t = first1;
-          while (t->next != NULL)
-          {
-                    t = t->next;
-                    count++;
-          }
-          return count;
 }
 void DisplayR()
 {
@@ -143,8 +132,7 @@ int main()
           printf("Class B : \n");
           Display2();
           Add1a2();
-          s = Length();
-          Sort(s);
+          Sort();
           printf("Merged and Sorted Class : \n");
           DisplayR();
           return 0;
