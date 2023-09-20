@@ -66,13 +66,11 @@ void display(STUDENT *stds, int n)
 }
 int main()
 {
-
     int n, i;
     printf("Enter the number of students ");
     scanf("%d", &n);
     STUDENT *stds;
     stds = (STUDENT *)malloc(n * sizeof(STUDENT *));
-
     for (i = 0; i < n; i++)
     {
         stds[i].d = (DOB *)malloc(100 * sizeof(DOB *));
