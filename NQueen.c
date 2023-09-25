@@ -2,7 +2,7 @@
 #include <string.h>
 
 // `N × N` chessboard
-#define N 8
+#define N 4
 
 // Function to check if two queens threaten each other or not
 int isSafe(char mat[][N], int r, int c)
