@@ -10,7 +10,7 @@ int main()
     ds=0;
     int d;
     printf("Input String");
-    gets(s);
+    scanf("%s",s);
     int l=strlen(s);
     for(int i=0; i<=l; i++)
     {
