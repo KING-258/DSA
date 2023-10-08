@@ -58,12 +58,12 @@ void Add1a2()
 void Sort()
 {
           temp = first1;
-          while(temp->next != NULL)
+          while (temp->next != NULL)
           {
                     t = temp->next;
-                    while(t!=NULL)
+                    while (t != NULL)
                     {
-                              if(temp->data > t->data)
+                              if (temp->data > t->data)
                               {
                                         int st = temp->data;
                                         temp->data = t->data;
