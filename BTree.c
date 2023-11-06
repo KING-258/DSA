@@ -30,52 +30,28 @@ void InOrder(struct Node *root){
         printf("%d ",root->data);
         InOrder(root->right);
     }
-    else{
-        return;
-    }
 }
 void PreOrder(struct Node *root){
     if(root != NULL){
-        PreOrder(root->left);
         printf("%d ",root->data);
+        PreOrder(root->left);
         PreOrder(root->right);
-    }
-    else{
-        return;
     }
 }
 void PostOrder(struct Node *root){
     if(root != NULL){
         PostOrder(root->left);
-        printf("%d ",root->data);
         PostOrder(root->right);
-    }
-    else{
-        return;
+        printf("%d ",root->data);
     }
 }
 void Print(struct Node *root){
-    int c;
-    printf("\n1.InOrder() 2.PreOrder() 3.PostOrder() 4.Exit() (1/2/3/4) : ");
-    do
-    {
-        scanf("%d",&c);
-        if(c == 1){
-            InOrder(root);
-        }
-        else if(c == 2){
-            PreOrder(root);
-        }
-        else if(c == 3){
-            PostOrder(root);
-        }
-        else if(c == 4){
-            printf("!!!Exit!!!");
-        }
-        else{
-            printf("Try Again");
-        }
-    } while (c != 4);
+    printf("\nInOrder Traversal ------> \n");
+    InOrder(root);
+    printf("\nPreOrder Traversal ------> \n");
+    PreOrder(root);
+    printf("\nPostOrder Traversal -------> \n");
+    PostOrder(root);
 }
 int main(){
     printf("Enter the Value for the Root Node and -1 for NULL : ");
