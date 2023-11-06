@@ -10,8 +10,7 @@ struct Node *Create(){
     int a;
     printf("Value for Node : ");
     scanf("%d",&a);
-    if (a == -1)
-    {
+    if (a == -1){
         return NULL;
     }
     else{
