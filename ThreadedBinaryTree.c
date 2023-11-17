@@ -68,7 +68,7 @@ void Print(struct Node *root){
 }
 int main(){
     int a;
-    printf("Enter the Value for the Root Node and -1 for NULL : ");
+    printf("Value of Root Node (Enter -1 for NULL): ");
     scanf("%d",&a);
     parent = Create(a);
     Print(parent);

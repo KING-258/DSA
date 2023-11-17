@@ -22,7 +22,7 @@ struct Node* Create(struct Node *root, int data){
             root->right = Create(root->right, data);
         }
         else{
-            printf("Duplicates Not Allowed");
+            printf("Duplicates Not Allowed\n");
         }
         return root;
     }

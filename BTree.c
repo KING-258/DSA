@@ -53,7 +53,7 @@ void Print(struct Node *root){
     PostOrder(root);
 }
 int main(){
-    printf("Enter the Value for the Root Node and -1 for NULL : ");
+    printf("Root Node (Enter -1 for NULL)\n");
     parent = Create();
     Print(parent);
     return 0;
