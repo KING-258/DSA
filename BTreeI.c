@@ -6,6 +6,10 @@ struct Node
     struct Node *right;
     struct Node *left;
 };
+struct Stack{
+    struct Node *data;
+    struct Stack *next;
+};
 struct Node *parent = NULL;
 struct Node *newNode(int a){
     struct Node *new;
@@ -15,8 +19,33 @@ struct Node *newNode(int a){
     new->left = NULL;
     return new;
 }
+void push (struct Stack **top, struct Node *n)	//push node in stack
+{
+  struct Stack *new_n = (struct Stack *) malloc (sizeof (struct Stack));
+  new_n->data = n;
+  new_n->next = (*top);
+  (*top) = new_n;
+}
+int isEmpty (struct Stack *top)	// check if stack is empty
+{
+  if (top == NULL)
+    return 1;
+  else
+    return 0;
+}
+struct Node *pop (struct Stack **top_n)	// pop the node from stack
+{
+  struct Node *item;
+  struct Stack *top;
+  top = *top_n;
+  item = top->data;
+  *top_n = top->next;
+  free (top);
+  return item;
+}
 void Create(struct Node *root, int a){
     struct Node *temp = root;
+    printf("Place Node %d\n",a);
     while(1){
         char ch;
         printf("Left or Right of Node %d (L/R) : ",temp->data);
@@ -45,17 +74,45 @@ void Create(struct Node *root, int a){
     }
 }
 void InOrder(struct Node *root){
-    if(root != NULL){
-        InOrder(root->left);
-        printf("%d ",root->data);
-        InOrder(root->right);
+    struct Node *temp;
+    temp = root;
+    struct Stack *s1 = NULL;
+    while(1){
+        if(temp != NULL){
+            push(&s1,temp);
+            temp = temp->left;
+        }
+        else{
+            if(isEmpty(s1) == 0){
+                temp = pop(&s1);
+                printf("%d ",temp->data);
+                temp = temp->right;
+            }
+            else{
+                break;
+            }
+        }
     }
 }
 void PreOrder(struct Node *root){
-    if(root != NULL){
-        printf("%d ",root->data);
-        PreOrder(root->left);
-        PreOrder(root->right);
+    struct Node *temp;
+    temp = root;
+    struct Stack *s1 = NULL;
+    while(1){
+        if(temp != NULL){
+            printf("%d ",temp->data);
+            push(&s1, temp);
+            temp = temp->left;
+        }
+        else{
+            if(isEmpty(s1) == 0){
+                temp = pop(&s1);
+                temp = temp->right;
+            }
+            else{
+                break;
+            }
+        }
     }
 }
 void PostOrder(struct Node *root){
@@ -76,7 +133,7 @@ void Print(struct Node *root){
 int main(){
     int ch;
     do{
-        printf("Enter Data (-1 to Exit) : ");
+        printf("Enter Data for Node (-1 to Exit) : ");
         scanf("%d",&ch);
         if(ch == -1){
             Print(parent);
