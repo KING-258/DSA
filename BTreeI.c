@@ -19,21 +19,21 @@ struct Node *newNode(int a){
     new->left = NULL;
     return new;
 }
-void push (struct Stack **top, struct Node *n)	//push node in stack
+void push (struct Stack **top, struct Node *n)
 {
   struct Stack *new_n = (struct Stack *) malloc (sizeof (struct Stack));
   new_n->data = n;
   new_n->next = (*top);
   (*top) = new_n;
 }
-int isEmpty (struct Stack *top)	// check if stack is empty
+int isEmpty (struct Stack *top)
 {
   if (top == NULL)
     return 1;
   else
     return 0;
 }
-struct Node *pop (struct Stack **top_n)	// pop the node from stack
+struct Node *pop (struct Stack **top_n)
 {
   struct Node *item;
   struct Stack *top;
