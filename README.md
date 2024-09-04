@@ -1,8 +1,8 @@
 # Created by KING-258
 # Hi there, I'm KING-258 👋
-![GitHub Stats](https://readme-md-stats.vercel.app/api?username=KING-258&theme=dark)
+![GitHub Stats](https://readme-md-stats.vercel.app/api?username=KING-258&theme=tokyonight)
 
-![Top Langs](https://readme-md-stats.vercel.app/api/top-langs/?username=KING-258)
+![Top Langs](https://readme-md-stats.vercel.app/api/top-langs/?username=KING-258&theme=tokyonight)
 
 ### C Programming and Data Structures 
 Clone :- git clone https://github.com/KING-258/DSLab
